@@ -36,6 +36,16 @@ The dataset appears clean, with no missing values. We have conducted preliminary
 
 ### Additional Features for Textual Analysis
 
+To enhance our model’s predictive power, we aim to explore features that could capture meaningful differences in language use between real and fake news. Potential features include:
+
+1. **TF-IDF Analysis**: 
+   - We plan to implement Term Frequency-Inverse Document Frequency (TF-IDF) as a way to identify unique words that are more or less likely to appear in real vs. fake news. TF-IDF will help highlight words that are characteristic of each label, shedding light on the linguistic patterns specific to fake or real news articles.
+   - This analysis could allow us to identify terms with high discriminatory power, which could serve as predictive indicators in later modeling stages.
+
+2. **Unique Words Analysis**:
+   - Using the TF-IDF scores, we will identify words that are uniquely associated with each label (e.g., words that frequently appear in fake news but rarely in real news, and vice versa).
+   - This approach will help us understand which words may be predictive of the news label and could inform additional feature engineering efforts or provide a basis for sentiment analysis.
+   
 We plan to consider additional metadata and thematic analysis, though thematic analysis might be complex. Potential features we could explore include:
 - **Sentiment Analysis**: Assessing the tone of the text.
 - **Topic Modeling**: Exploring topics within news texts to see if certain themes are prevalent in fake or real news.
