@@ -31,6 +31,7 @@ The dataset appears clean, with no missing values. We have conducted preliminary
 - **Label Distribution**: Even split between classes, visualized using `sns.countplot`.
 - **Title and Text Length**: Added new features `title_length` and `text_length` to assess the distribution of title and text lengths.
 - **Word Count in Titles**: Calculated word count for each title and found a diverse range of title lengths.
+- **Word Count in Texts**: Applied same metric as above but to article text in particular.
 
 ## Future Directions
 
