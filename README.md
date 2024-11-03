@@ -58,7 +58,7 @@ In order to create features from our text data, we need to perform preprocessing
 - **Removing Stop Words**: Using an imort like NLTK we can remove stop words, which are words that carry little significance, this can make the words that do remain more significant for our model predictions.
 - **Tokenization**: Depending on some of our features Tokenization through either (stemmatization or lemmatization) would allow us to make our text easier to analyze. We will then map each token to a unique integer in order for the data to be suitable for machine learning.
 - **Padding**: Machine learning algorithms need an input shape that is consistent, and since the word sequences in our dataset vary in length, we need to add padding to our data (or potentially truncate). This will change the variable length sequences to a fixed length.
-- **Embeddings**: Using our integer mapped tokens, we can create embeddings for each available integer. These embeddings are vectors of a chosen length (n) that are randomly initialized. These will be as n*(token size) new parameters that are trained over time, and essentially act as a way to "give meaning" to each token.
+- **Embeddings**: Using our integer mapped tokens, we can create embeddings for each available token. These embeddings are vectors of a chosen length (n) that are randomly initialized. These will be n*(token size) new parameters that are trained over time, and essentially act as a way to "give meaning" to each token. In most modern libaries this is usually a quick step one can add to the beginning of their model, but since it is technically a change in the representation of our input data before we start training we will include it here.
 
 
 ### Feature Engineering
