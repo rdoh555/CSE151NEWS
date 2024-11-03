@@ -56,8 +56,10 @@ We plan to consider additional metadata and thematic analysis, though thematic a
 In order to create features from our text data, we need to perform preprocessing steps to make sure our features can pick up patterns while removing as much noise as possible here are some preprocessing steps:
 - **Removing Punctuation**: Using Regular expressions or other filters we can take out punctuation to make sure our features can accurately find words without punctuation causing any confusion.
 - **Removing Stop Words**: Using an imort like NLTK we can remove stop words, which are words that carry little significance, this can make the words that do remain more significant for our model predictions.
-- **Tokenization**: Depending on some of our features Tokenization through either (stemmatization or lemmatization) would allow us to make our text easier to analyze.
-- **TF-IDF Encoding**: For one our features we can use a NLTK import to create TF-IDF vectors that we can use as one our features, this encoding would allow us to see what words are really important to our regular and fake news articles.
+- **Tokenization**: Depending on some of our features Tokenization through either (stemmatization or lemmatization) would allow us to make our text easier to analyze. We will then map each token to a unique integer in order for the data to be suitable for machine learning.
+- **Padding**: Machine learning algorithms need an input shape that is consistent, and since the word sequences in our dataset vary in length, we need to add padding to our data (or potentially truncate). This will change the variable length sequences to a fixed length.
+- **Embeddings**: Using our integer mapped tokens, we can create embeddings for each available integer. These embeddings are vectors of a chosen length (n) that are randomly initialized. These will be as n*(token size) new parameters that are trained over time, and essentially act as a way to "give meaning" to each token.
+
 
 ### Feature Engineering
 
