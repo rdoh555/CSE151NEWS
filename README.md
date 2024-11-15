@@ -43,11 +43,13 @@ import re
 from nltk.corpus import stopwords
 from nltk import word_tokenize, sent_tokenize
 from nltk.stem import WordNetLemmatizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 ```
 
 - **string**: Provides a collection of string constants such as punctuation.
 - **nltk**: The core library for natural language processing tasks. We use it for tasks like tokenization, lemmatization, and stopword filtering.
 - **re**: Used for regular expressions and text cleaning.
+- **TfidfVectorizer**: Used for TF-IDF text analysis.
 
 The `nltk.download('all')` command downloads all NLTK datasets, corpora, and models required for preprocessing.
 
@@ -99,7 +101,16 @@ tokens_lemmatized = [lemmatizer.lemmatize(word) for word in tokens_no_stopwords]
 
 - **WordNetLemmatizer()**: The lemmatizer provided by NLTK, which uses the WordNet lexical database to find the base form of words.
 
-### 5. Output
+### 5. Text Analysis
+
+Term Frequency-Inverse Document Frequency (TF-IDF) is a Natural Language Processing (NLP) used to measuring the importance of a word within the collection of words by considering how often the word appears within the document. The Tfidf Vectorizer is used for this process:
+
+```python
+tfidf = TfidfVectorizer()
+result = tfidf.fit_transform(corpus)
+```
+
+### 6. Output
 
 Finally, after performing the preprocessing steps, you have a list of cleaned, tokenized, and lemmatized words that can be used for further analysis or machine learning tasks.
 
