@@ -137,3 +137,18 @@ print(tokens_lemmatized)
 ```
 
 ---
+### Logistic Regression Results
+
+After training our Logistic regression results we used accuracy, precision, recall and F1 Score to evaluate our binary classification model.
+The results are shown below of the training versus our testing error:
+Training Evaluation:
+Precision: 1.00
+Recall: 1.00
+Accuracy: 1.00
+F1 Score: 1.00
+ 
+Testing Evaluation:
+Precision: 0.97
+Recall: 0.98
+Accuracy: 0.97
+F1 Score: 0.97
